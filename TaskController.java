@@ -1,15 +1,12 @@
 public class TaskController {
-    // Aquí está el arreglo local que pidió el profesor
     private Task[] tasks;
     private int taskCount;
 
-    // Constructor: inicializa el arreglo para 10 tareas como máximo
     public TaskController(int size) {
         tasks = new Task[size];
         taskCount = 0;
     }
 
-    // Método de INSERCIÓN
     public void insertTask(Task newTask) {
         if (taskCount < tasks.length) {
             tasks[taskCount] = newTask;
@@ -20,7 +17,6 @@ public class TaskController {
         }
     }
 
-    // Método de BÚSQUEDA
     public Task searchTask(int id) {
         for (int i = 0; i < taskCount; i++) {
             if (tasks[i].getId() == id) {
@@ -32,7 +28,6 @@ public class TaskController {
         return null;
     }
 
-    // Método de ELIMINACIÓN
     public void deleteTask(int id) {
         int indexToRemove = -1;
         
@@ -54,8 +49,6 @@ public class TaskController {
             System.out.println("Error: Cannot delete. Task ID " + id + " not found.");
         }
     }
-
-    // Mostrar todas las tareas
     public void showAllTasks() {
         System.out.println("\n--- All Current Tasks ---");
         for (int i = 0; i < taskCount; i++) {
