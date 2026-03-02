@@ -1,4 +1,4 @@
-package com.ken.taskapp;
+package com.richard.taskapp;
 
 import jakarta.persistence.*;
 import lombok.Data;

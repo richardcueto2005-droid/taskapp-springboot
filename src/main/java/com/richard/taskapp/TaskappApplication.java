@@ -1,5 +1,4 @@
-package com.ken.taskapp;
-
+package com.richard.taskapp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

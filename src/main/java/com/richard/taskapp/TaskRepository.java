@@ -1,4 +1,4 @@
-package com.ken.taskapp;
+package com.richard.taskapp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

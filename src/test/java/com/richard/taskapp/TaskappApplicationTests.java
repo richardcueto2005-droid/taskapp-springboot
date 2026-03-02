@@ -1,4 +1,4 @@
-package com.ken.taskapp;
+package com.richard.taskapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
