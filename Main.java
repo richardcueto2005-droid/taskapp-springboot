@@ -14,7 +14,7 @@ public class Main {
         controller.insertTask(task3);
         
         controller.showAllTasks();
-
+        
         System.out.println("--- SEARCHING TASKS ---");
         controller.searchTask(2);
         controller.searchTask(99);
