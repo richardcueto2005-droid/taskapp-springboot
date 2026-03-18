@@ -12,12 +12,20 @@ public class JwtUtil {
 
     public String generateToken(String username) {
         return Jwts.builder().setSubject(username).setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 15))
                 .signWith(key).compact();
     }
+
+    public String generateRefreshToken(String username) {
+        return Jwts.builder().setSubject(username).setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + 1000L * 60 * 60 * 24 * 7))
+                .signWith(key).compact();
+    }
+
     public String extractUsername(String token) {
         return Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody().getSubject();
     }
+
     public boolean validateToken(String token) {
         try { Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token); return true; }
         catch (Exception e) { return false; }
